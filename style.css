@@ -1,0 +1,33 @@
+    h1 {
+        text-align: center;
+    }
+    /* img {
+    text-align: center;
+} */
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 30%;
+    }
+    
+    input {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* margin: auto; */
+        padding: 12px 20px;
+    }
+    
+    label {
+        text-align: center;
+    }
+    
+    .table {
+        width: 50%;
+    }
+    
+    .search {
+        display: flex;
+    }

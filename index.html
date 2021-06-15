@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin App</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>
+
+        <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+         
+            <span class="caret"></span></button>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">Stuff List</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <form class="needs-validation" novalidate>
+        <img src="https://img2.pngio.com/admin-icons-free-download-png-and-svg-administrator-icon-png-200_200.png" class="rounded mx-auto d-block">
+        <h1>Admin App</h1>
+
+        <div>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="FirstName" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <br>
+        <div>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="LastName" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+
+        <br>
+        <div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                </div>
+                <input type="email" pattern="+@globex\.com" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Enter correct email.
+                </div>
+            </div>
+
+            <br>
+
+            <div>
+                <input type="number" pattern="[0-9]{3}" minlength="0" maxlength="13" class="form-control" id="validationCustom04" placeholder="Identity Number" required>
+                <div class="invalid-feedback">
+                    Please provide with a valid Id Number.
+                </div>
+            </div>
+            <br>
+            <div>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Position" required>
+                <div class="invalid-feedback">
+                    Please provide us with your work position.
+                </div>
+            </div>
+
+            <br>
+            <div>
+                <input type="number" class="form-control" id="validationCustom05" placeholder="Salary" required>
+                <div class="invalid-feedback">
+                    Please provide your salary.
+                </div>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+              Check if the information provided is correct.
+            </label>
+                    <div class="invalid-feedback">
+                        You must check before submitting.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</body>
+
+</html>
