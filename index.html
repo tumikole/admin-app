@@ -11,68 +11,61 @@
     <title>Admin App</title>
 </head>
 
-<body>
+<body style="background-color: rgb(228, 216, 216);">
 
-    <nav class="navbar navbar-dark bg-primary">
-
-
-        <div class="btn-group btn-group-vertical">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a id="stuffLink" tabindex="-1" href="list.html">Stuff Member</a></button>
+    <nav class=" navbar navbar-dark bg-primary ">
+        <div class="btn-group btn-group-vertical ">
+            <button class="btn btn-outline-success my-2 my-sm-0 " type="submit "><a id="stuffLink " tabindex="-1 " href="list.html ">Stuff Member</a></button>
         </div>
-        <h1 style="color:white;">Admin App</h1>
+        <h1 style="color:white; ">Admin App</h1>
     </nav>
 
 
-    <form class="needs-validation">
-        <img src="https://img2.pngio.com/admin-icons-free-download-png-and-svg-administrator-icon-png-200_200.png " class="rounded mx-auto d-block ">
+    <form action="#" id="myForm">
+        <div>
+            <img src="https://img2.pngio.com/admin-icons-free-download-png-and-svg-administrator-icon-png-200_200.png" class="rounded mx-auto d-block">
+        </div>
 
         <div>
-            <input type="text " class="form-control " id="validationCustom01 " placeholder="FirstName " required>
-            <div class="valid-feedback ">
-                Looks good!
-            </div>
+            <input type="text" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+[ '-]?)+$" class="form-control" id="fname" placeholder="FirstName" required>
+
         </div>
         <br>
         <div>
-            <input type="text " class="form-control " id="validationCustom02 " placeholder="LastName " required>
-            <div class="valid-feedback ">
-                Looks good!
-            </div>
+            <input type="text" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" class="form-control " id="lname" placeholder="LastName" required>
+
         </div>
-
-
 
         <br>
 
         <div>
-            <input type="number" pattern="[0-9]{3}" maxlength="13" class="form-control" id="validationCustom03" placeholder="Identity Number" required>
-            <div class="invalid-feedback ">
-                Please provide with a valid Id Number.
-            </div>
+            <input type="number" class="form-control" id="idNumb" placeholder="Identity Number" required>
+
         </div>
+        <!-- <br> -->
+
+        <!-- <div>
+            <input type="date " class="form-control " id="validationCustom06 " placeholder="Date " required>
+
+        </div> -->
         <br>
         <div>
-            <input type="text " class="form-control " id="validationCustom04 " placeholder="Position " required>
-            <div class="invalid-feedback ">
-                Please provide us with your work position.
-            </div>
+            <input type="text " pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+[ '-]?)+$" class="form-control" id="position" placeholder="Position" required>
+
         </div>
 
         <br>
         <div>
-            <input type="number " class="form-control " id="validationCustom05 " placeholder="Salary " required>
-            <div class="invalid-feedback ">
-                Please provide your salary.
-            </div>
+            <input type="number" class="form-control" id="salary" placeholder="Salary" required>
+
         </div>
 
-
         <br>
-        <button class="btn btn-primary" type="submit" onsubmit="register(event)">Save</button>
+        <button type="submit" class="btn btn-primary">Save</button>
     </form>
 
-    <script src=" main.js "></script>
-    <link rel="stylesheet " href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css " integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm " crossorigin="anonymous ">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css " integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm " crossorigin="anonymous ">
 </body>
 
 </html>
