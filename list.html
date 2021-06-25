@@ -10,44 +10,47 @@
     <title>Admin App</title>
 </head>
 
-<body style="background-color: rgb(228, 216, 216);">
-    <nav class="navbar navbar-dark bg-dark">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="index.html">Add Stuff Members</a></button>
+<body>
+    <br>
+    <nav class="navbar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="list.html">Stuff List</a></button>
         
+        <h1 class="display-4 text-center">Admin<span class="text-primary"> App</span></h1>
         
         <div class="search">
-            <input id="myInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <input  class="form-control mr-sm-2 inputSearch" type="search" id="mySearch" onkeyup="myFunction()" placeholder="Search for names.." aria-label="Search">
         </div>
       </nav>
     
         <br>
         
-    <h2 id="caption ">Member List</h2>
-    <br>
-
-
-
-
-    <!-- <table id="myTable " class="table table-bordered table-dark ">
-        <thead>
-            <tr>
-
-                <th scope="col ">First Name</th>
-                <th scope="col ">Last Name</th>
-                <th scope="col ">Identity Number</th>
-                <th scope="col ">Position</th>
-                <th scope="col ">Salary</th>
-                <th scope="col ">Action</th>
-
-
-            </tr>
-        </thead>
-        <tbody id="output">
-
-
-        </tbody>
-    </table> -->
-
+        <br>
+        <h2 id="caption">Member List</h2>
+        <br>
+    
+    
+    
+       
+    
+        <table id="myTable" class="table table-striped">
+            <thead>
+                <tr>
+    
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>IdentityNumber</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+    
+    
+                </tr>
+            </thead>
+            <tbody id="output">
+    <tr></tr>
+    
+            </tbody>
+        </table>
 
 
 

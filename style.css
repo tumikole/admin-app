@@ -3,59 +3,32 @@
     padding: 0;
 }
 
-body {
-    background-color: black;
+body{
+  background-image: url('https://picjumbo.com/wp-content/uploads/entrepreneur-working-on-his-macbook_5fd21ae04b030-1570x1047.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-  
-  .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-  }
-   
-  .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-  
-  div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-  }
-  
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
-  
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
-  }
+h1{
+
+text-align: center;
+}
+
+#caption{
+  text-align: center;
+  color: white !important;
+}
+
+
+
+.navbar{
+  background-color: rgb(227, 233, 243);
+  margin:auto;
+  width:90%;
+  border : 1px solid rgb(170, 43, 43);
+  border-radius: 50px;;
+}
+
 
 .avatar {
     vertical-align: middle;
@@ -64,38 +37,46 @@ body {
     border-radius: 50%;
 }
 
-h1 {
-    display: flex;
-    flex-direction: center;
-    /* color: white; */
-}
 
 form {
+  background-color: rgb(227, 233, 243);
     display: flex;
     flex-direction: column;
     margin: auto;
     width: 30%;
+    border : 1px solid rgb(170, 43, 43);
+  border-radius: 30px;
+  padding-bottom: 20px;
 }
 
+.table {
+  width:60% !important;
+  margin:auto;
+}
 input {
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* margin: auto; */
-    padding: 12px 20px;
+  
 }
 
 label {
     text-align: center;
 }
 
-.table {
-    width: 50%;
-}
 
-.search {
-    display: flex;
+
+#submitBtn{
+  width:40% !important;
+  margin:auto;
+  background-color: black;
+  padding: 10px;
+  color:white;
 }
+/* .inputSearch {
+    display: flex;
+    border-radius: 50px;
+} */
 
 #stuffLink {
     color: white;
@@ -107,4 +88,12 @@ label {
 
 #table_btn {
     padding: 1px;
+}
+
+th{
+  background-color: rgb(227, 233, 243);
+}
+
+td{
+color: rgb(2, 247, 23);
 }
