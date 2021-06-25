@@ -54,7 +54,7 @@ class UI {
                                                              <td><button type="button" class="btn btn-danger delete">x</button></td>
                                                      </tr>
                                                      `;
-                list.appendChild(row);
+                // list.appendChild(row);
         }
 
         static deleteEmployee(el) {
