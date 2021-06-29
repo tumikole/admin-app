@@ -3,11 +3,11 @@
     padding: 0;
 }
 
-body{
-  background-image: url('https://picjumbo.com/wp-content/uploads/entrepreneur-working-on-his-macbook_5fd21ae04b030-1570x1047.jpg');
+/* body{
+  background-image: url('https://image.freepik.com/free-photo/top-view-office-desk-modern-with-workspace-office-with-copy-space-flat-lay_34936-2578.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 h1{
 
@@ -49,7 +49,7 @@ form {
   padding-bottom: 20px;
 }
 
-.table {
+.myTable {
   width:60% !important;
   margin:auto;
 }

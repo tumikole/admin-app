@@ -1,71 +1,75 @@
-function myFunction() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("mySearch");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                tr[i].style.display = "";
-                        } else {
-                                tr[i].style.display = "none";
-                        }
-                }
-        }
-}
+let list = []
+// function myFunction() {
+//         var input, filter, table, tr, td, i, txtValue;
+//         input = document.getElementById("mySearch");
+//         filter = input.value.toUpperCase();
+//         table = document.getElementById("myTable");
+//         tr = table.getElementsByTagName("tr");
+//         for (i = 0; i < tr.length; i++) {
+//                 td = tr[i].getElementsByTagName("td")[0];
+//                 if (td) {
+//                         txtValue = td.textContent || td.innerText;
+//                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//                                 tr[i].style.display = "";
+//                         } else {
+//                                 tr[i].style.display = "none";
+//                         }
+//                 }
+//         }
+// }
 
 const employee = event => {
+
+        event.preventDefault();
         let formData = {
                 fname: document.querySelector("#fname").value,
                 lname: document.querySelector("#lname").value,
                 idNumb: document.querySelector("#idNumb").value,
+                email: document.querySelector("#email").value,
                 position: document.querySelector("#position").value,
                 salary: document.querySelector("#salary").value
         }
-        localStorage.setItem('formData', JSON.stringify(formData));
+        list.push(formData)
+        localStorage.setItem('formData', JSON.stringify(list));
         displayData();
-        clearFields();
-
-        event.preventDefault();
 }
 
 function displayData() {
-        let { fname, lname, idNumb, position, salary } = JSON.parse(localStorage.getItem('formData'));
+        let data = JSON.parse(localStorage.getItem('formData'));
         var output = document.querySelector('#output');
-        output.innerHTML = `
-             <tr>
-                                                      <th>FirstName</th>
-                                                      <td>${fname}</td>
-                                                      <th>LastName</th>
-                                                       <td>${lname}</td>
-                                                       <th>IdNumber</th>
-                                                       <td>${idNumb}</td>
-                                                       <th>Position</th>
-                                                          <td>${position}                                                          <button type="button" class="btn editIt">Edit</button>
-                                                          <button type="button" class="btn saveIt">Save</button></td>
-                                                       </td>
-                                                       <td>Salary</td>
-                                                           <td>${salary}
-                                                           <button type="button" class="btn editIt">Edit</button>
-                                                           <button type="button" class="btn saveIt">Save</button></td>
-                                                        
-                                                    </tr>
-                                                    `;
+        output.innerHTML = ''
+        for (let i in data) {
+
+                output.innerHTML += `
+                <tr>
+                             <td scope="col">${data[i].fname}</td>
+                              <td scope="col">${data[i].lname}</td>
+                              <td scope="col">${data[i].idNumb}</td>
+                              <td scope="col">${data[i].email}</td>
+                                 <td scope="col">${data[i].position}
+                                 <button type="button" class="btn editIt">Edit</button>
+                                 <button type="button" class="btn saveIt">Save</button></td>
+                                 <td scope="col">${data[i].salary}
+                                  <button type="button" class="btn editIt">Edit</button>
+                                  <button type="button" class="btn saveIt">Save</button></td>
+                                                                    </tr>
+                                
+                           `;
+
+        }
 
 }
 
 displayData();
 
-function clearFields() {
-                        document.querySelector('#fname').value = '';
-                        document.querySelector('#lname').value = '';
-                        document.querySelector('#idNumb').value = '';
-                        document.querySelector('#position').value = '';
-                        document.querySelector('#salary').value = '';
-                }
+
+// function clearFields() {
+//                         document.querySelector('#fname').value = '';
+//                         document.querySelector('#lname').value = '';
+//                         document.querySelector('#idNumb').value = '';
+//                         document.querySelector('#position').value = '';
+//                         document.querySelector('#salary').value = '';
+//                 }
 
 
 
@@ -168,7 +172,7 @@ function clearFields() {
 
 
 //         if (firstName === '' || lastName === '' || idNumber === '' || position === '' || salary === '') {
-//                 alert('Please fill all fields');
+//                 alert alert('Please fill all fields' danger);
 //         } else {
 
 //                 const employee = new Employee(firstName, lastName, idNumber, position, salary)
